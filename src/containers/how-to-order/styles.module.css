@@ -1,0 +1,27 @@
+.pageContainer {
+    width: 100%;
+    padding: 0 787px 0 392px;
+}
+
+
+.container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    margin: 40px auto 40px;
+}
+
+.paragraph {
+    font-size: 16px;
+    line-height: 130%;
+    color: #414141;
+    width: 464px;
+    margin: 24px 0 38px 0;
+}
+
+.flexWrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 45px;
+}

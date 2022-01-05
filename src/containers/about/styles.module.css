@@ -1,0 +1,24 @@
+.title {
+  padding-top: 40px;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 62px;
+  color: #414141;
+  } 
+
+.description {
+  max-width: 656px;
+  margin-bottom: 48px;
+}
+
+.descriptionItem {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 130%;
+  color: #414141;
+}
+
+.descriptionItem:last-of-type {
+  margin-bottom: 0;
+}

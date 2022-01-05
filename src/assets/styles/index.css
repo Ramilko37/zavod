@@ -1,0 +1,427 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+@font-face {
+  font-family: "Golos";
+  src: url("/public/fonts/GolosTextRegular.woff2");
+}
+/* purgecss end ignore */
+
+/* Custom Css starts from here */
+@import url('./nrz-styles.css');
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  @apply font-custom;
+  @apply text-gray-700;
+  @apply text-14px;
+  color: #414141;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-custom;
+  @apply text-gray-700;
+  @apply font-semibold;
+}
+
+h1 {
+  @apply text-30px;
+}
+
+h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 110%;
+  color: #17194A;
+}
+
+h3 {
+  @apply text-18px;
+}
+
+h4 {
+  @apply text-16px;
+}
+
+h5 {
+  @apply text-14px;
+}
+
+h6 {
+  @apply text-13px;
+}
+
+input[type='search'],
+input,
+button {
+  -webkit-appearance: none;
+}
+
+
+@media (min-width: 2560px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1136px;
+  }
+}
+
+
+@media (min-width: 1680px) {
+  .container {
+    max-width: 1136px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1136px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1136px;
+  }
+}
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  opacity: 0;
+  transition: visibility .5s, opacity .5s ease-in-out;
+}
+
+.popup-cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  transition: visibility .5s, opacity .5s ease-in-out;
+}
+
+.popup_opened {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-submit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(29, 55, 120, 0.3);
+  opacity: 0.3;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  transition: visibility .5s, opacity .5s ease-in-out;
+}
+
+.popup-submit_opened {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__container {
+  max-width: 465px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 32px rgba(14, 24, 49, 0.3);
+  border-radius: 8px;
+  padding: 48px 40px;
+}
+
+.popup__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  /* Gray / 900 (text) */
+
+  color: #414141;
+}
+
+.popup__paragraph {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  /* or 21px */
+
+  display: flex;
+  align-items: center;
+
+  /* Gray / 900 (text) */
+
+  color: #414141;
+}
+
+
+
+.menuBtn {
+  display: none;
+
+}
+
+.menuIcon {
+  width: 26px;
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .menuBtn {
+    display: flex !important;
+    margin-left: 40px;
+  }
+}
+
+.bar {
+  width: 26px;
+  height: 3px;
+  display: flex;
+  transition: all 0.25s ease-in-out;
+  margin-bottom: 5px;
+  @apply bg-gray-900;
+  @apply rounded-sm;
+
+}
+
+.bar:last-child {
+  margin: 0;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ScrollBar Height Calc */
+.cart-scrollbar {
+  max-height: calc(100vh - 233px);
+  -webkit-overflow-scrolling: touch;
+}
+
+.checkout-scrollbar {
+  max-height: calc(100vh - 182px);
+  -webkit-overflow-scrolling: touch;
+}
+
+.details-scrollbar {
+  max-height: calc(100vh - 182px);
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-scrollbar {
+  max-height: calc(100vh - 138px);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* footer Social icons */
+.social {
+  color: #999999;
+  margin-right: 30px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.3;
+}
+
+.social:last-child {
+  margin-right: 0;
+}
+
+.social.facebook:hover {
+  color: #3b5999;
+}
+
+.social.twitter:hover {
+  color: #55acee;
+  opacity: 0.6;
+}
+
+.social.youtube:hover {
+  color: #cd201f;
+}
+
+.social.github:hover {
+  color: #211f1f;
+}
+
+.social.instagram:hover {
+  color: #e4405f;
+}
+
+.social.linkedin:hover {
+  color: #0077b5;
+}
+
+/* Carousel Css */
+@screen lg {
+  .custom-react-multi-carousel-dot-list {
+    position: absolute;
+    bottom: 74px;
+    left: 160px;
+    width: auto;
+    right: auto;
+    bottom: 54px;
+    left: 160px;
+  }
+}
+
+
+
+
+/* Cart */
+.drawer {
+  width: 100%;
+  height: 97%;
+  max-width: 625px;
+  z-index: 22;
+  top: 1.5%;
+  bottom: 1.5%;
+  margin-bottom: 90px;
+  box-shadow: 0px 8px 32px rgba(14, 24, 49, 0.3);
+  border-radius: 8px 0px 0px 8px;
+  padding: 0 30px 0;
+
+
+  @apply w-full;
+  @apply flex;
+  @apply flex-col;
+  @apply bg-white;
+  @apply shadow-cart;
+  @apply fixed;
+  @apply transition;
+  @apply duration-350;
+  @apply ease-in-out;
+}
+
+.drawer-cart {
+  right: 0;
+  transform: translate(625px, 0);
+}
+
+.drawer-menu {
+  left: 0;
+  transform: translate(-625px, 0);
+}
+
+.drawer-cart.open,
+.drawer-menu.open {
+  transform: translate(0, 0);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 21;
+  @apply w-full;
+  @apply h-full;
+  @apply flex;
+  @apply fixed;
+  @apply top-0;
+  @apply left-0;
+}
+
+.component-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  @apply w-full;
+  @apply h-full;
+  @apply flex;
+  @apply absolute;
+  @apply top-0;
+  @apply left-0;
+}
+
+/* About Us */
+.page-title:after {
+  content: '';
+  position: relative;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  display: flex;
+  @apply bg-gray-900;
+}
+
+.about-img-grid img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.fade-enter{
+  opacity: 0;
+}
+.fade-exit{
+  opacity: 1;
+}
+.fade-enter-active{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active{
+  transition: opacity 500ms;
+}
+
+
+
+
+/* Tailwind Utils */
+@tailwind utilities;
+
+

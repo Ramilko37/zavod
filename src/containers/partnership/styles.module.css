@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    padding: 50px 50px 112px 390px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.containerFooterForm {
+    display: flex;
+    padding: 40px 0 128px;
+}
+
+.container__image {
+    background-image: url("../../assets/image/zavod-image.png");
+    background-size: cover;
+}
+
+.partners-form__title {
+    color: red;
+}
+
+.partners-form {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 20px 30px 0 30px;
+}
+
